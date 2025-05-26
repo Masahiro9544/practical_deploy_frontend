@@ -1,0 +1,7 @@
+{
+  "/customers/page": "app/customers/page.js",
+  "/customers/update/[id]/confirm/page": "app/customers/update/[id]/confirm/page.js",
+  "/customers/read/[id]/page": "app/customers/read/[id]/page.js",
+  "/customers/update/[id]/page": "app/customers/update/[id]/page.js",
+  "/customers/delete/[id]/page": "app/customers/delete/[id]/page.js"
+}
