@@ -2,7 +2,16 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-export default function ConfirmPage(props) {
+// メインコンポーネントをSuspenseでラップ
+export default function ConfirmPageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ConfirmPage />
+    </Suspense>
+  )
+}
+
+function ConfirmPage(props) {
   const customer_id = useSearchParams().get("customer_id");
 
   return (
