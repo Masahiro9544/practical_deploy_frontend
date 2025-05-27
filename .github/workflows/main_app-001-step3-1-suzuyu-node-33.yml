@@ -69,5 +69,5 @@ jobs:
         with:
           app-name: 'app-001-step3-1-suzuyu-node-33'
           slot-name: 'Production'
-          package: .
+          package: ./deploy
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7CD326D8DC6B48568D505ACD8E9E80C5 }}
