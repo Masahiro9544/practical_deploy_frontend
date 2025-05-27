@@ -4,7 +4,16 @@ import fetchCustomer from "./../fetchCustomer";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, use } from "react";
 
-export default function ConfirmPage(props) {
+// メインコンポーネントをSuspenseでラップ
+export default function ConfirmPageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ConfirmPage />
+    </Suspense>
+  )
+}
+
+function ConfirmPage(props) {
   const params = use(props.params);
   const router = useRouter();
   const id = params.id;
